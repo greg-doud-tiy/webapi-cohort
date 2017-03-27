@@ -9,8 +9,7 @@
 		<tbody id="StudentList" ng-Cloak>
 			<tr ng-repeat="student in ctrl.Students">
 				<td>{{student.Id}}</td>
-				<td>{{student.Name}}</td>
-				<td><button class='btn btn-default' data-studentId={{student.Id}}>Edit</button>
+				<td><a href="#/student/{{student.Id}}">{{student.Name}}</a></td>
 			</tr>
 		</tbody>
 	</table>

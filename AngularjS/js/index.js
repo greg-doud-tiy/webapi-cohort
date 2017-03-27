@@ -2,9 +2,8 @@ $().ready(function() {
 
 	$('p').css('color', 'red');
 
-	$('#StudentList').on("click", ".btn", function() {
-		var buttonId = $('this').Id
-		console.log('Id', buttonId);
+	$("button").click(function() {
+		console.log("button clicked");
 	});
 
 });

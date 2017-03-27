@@ -1,13 +1,14 @@
 
 angular
 	.module("Cohort")
-	.config(CohortCfg);
-
-CohortCfg.$inject = ['$routeProvider']; 
-
-function CohortCfg($routeProvider) {
+	.config(['$routeProvider', function($routeProvider) {
 
 	$routeProvider
+		.when('/student/:studentId', {
+			templateUrl: 'views/student.view.html',
+			controller: 'StudentCtrl',
+			controllerAs: 'ctrl'
+		})
 		.when('/', {
 			templateUrl: 'views/home.view.html'
 		})
@@ -18,4 +19,4 @@ function CohortCfg($routeProvider) {
 			redirectTo: '/'
 		});
 
-};
+}]);
