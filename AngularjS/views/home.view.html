@@ -2,12 +2,15 @@
 	<div class='bg-primary'>Home Page</div>
 	<table class="table tbl-default">
 		<thead>
-			<td>Id</td><td>Name</td>
+			<td>Id</td>
+			<td>Name</td>
+			<td>&nbsp;</td>
 		</thead>
-		<tbody ng-repeat="student in ctrl.Students">
-			<tr>
+		<tbody id="StudentList" ng-Cloak>
+			<tr ng-repeat="student in ctrl.Students">
 				<td>{{student.Id}}</td>
 				<td>{{student.Name}}</td>
+				<td><button class='btn btn-default' data-studentId={{student.Id}}>Edit</button>
 			</tr>
 		</tbody>
 	</table>

@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body ng-controller='StudentCtrl as ctrl'>
-	<p>This AngularJS application is {{ctrl.about}}</p>
+	<p ng-cloak>This AngularJS application is {{ctrl.about}}</p>
 	<div ng-view></div>
 </body>
 </html>

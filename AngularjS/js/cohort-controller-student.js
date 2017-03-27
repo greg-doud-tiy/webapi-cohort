@@ -9,16 +9,12 @@ function StudentCtrl(StudentSvc) {
 	self.about = StudentSvc.about;
 
 	self.getStudents = function() {
-		var promise = StudentSvc.testFunc();
-
+		var promise = StudentSvc.refreshStudents();
 		promise.then(function() {
-			StudentSvc.log();
+			self.Students = StudentSvc.Students;
 		},function() {
 			console.log('rejected');
 		});
-		// StudentSvc.refreshStudents();
-		// self.Students = StudentSvc.Students;
-		// console.log('controller students:', self.Students);
 	};
 
 	self.getStudents();
