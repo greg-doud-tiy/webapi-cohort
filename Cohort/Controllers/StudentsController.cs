@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Results;
 using System.Web.Http.Description;
 using Cohort;
 using Cohort.Models;
@@ -86,8 +87,8 @@ namespace Cohort.Controllers
             return CreatedAtRoute("DefaultApi", new { id = student.Id }, student);
         }
 
-        // DELETE: api/Students/5
-        [ResponseType(typeof(Student))]
+		// DELETE: api/Students/5
+		[ResponseType(typeof(Student))]
         public IHttpActionResult DeleteStudent(int id)
         {
             Student student = db.Students.Find(id);

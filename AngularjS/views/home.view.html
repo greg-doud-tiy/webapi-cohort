@@ -10,7 +10,9 @@
 			<tr ng-repeat="student in ctrl.Students">
 				<td>{{student.Id}}</td>
 				<td><a href="#/student/{{student.Id}}">{{student.Name}}</a></td>
+				<td><button ng-click='ctrl.deleteStudent(student.Id)'>DEL</button></td>
 			</tr>
 		</tbody>
 	</table>
+	<button ng-click='ctrl.addStudent("*new*")'>Add</button>
 </div>
